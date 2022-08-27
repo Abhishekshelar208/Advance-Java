@@ -1,0 +1,27 @@
+/*
+Write a program to create a empty frame in Advance Java using Frame class.
+Coded by Abhishek Dadasaheb Shelar.
+ */
+
+package com;
+
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+class Main{
+    public static void main(String[] args) {
+        Frame f=new Frame("Abhishek Shelar");
+        f.setVisible(true);
+        f.setLayout(null);
+        f.setSize(400,300);
+
+        // Following code is for displose the frame by clicking close button.
+        f.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                f.dispose();
+            }
+        });
+    }
+}
